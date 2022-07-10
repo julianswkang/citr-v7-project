@@ -3,6 +3,8 @@ import { useState } from "react";
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
+  //using hooks
+  //DO NOT USE CONDITIONAL HOOKS 
   const [location, updateLocation] = useState("");
   const [animal, updateAnimal] = useState("");
   const [breed, updateBreed] = useState("");
@@ -16,6 +18,7 @@ const SearchParams = () => {
             id="location"
             value={location}
             placeholder="Location"
+            //e = event, e.target = target of the event
             onChange={(e) => updateLocation(e.target.value)}
           />
         </label>
