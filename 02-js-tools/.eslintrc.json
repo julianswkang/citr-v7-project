@@ -4,7 +4,7 @@
     "plugin:import/errors",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "prettier" //prettier must come last! shuts off rules from other configs
   ],
   "rules": {
     "react/prop-types": 0,
@@ -19,6 +19,7 @@
     }
   },
   "env": {
+    //what environment we are working in
     "es6": true,
     "browser": true,
     "node": true
