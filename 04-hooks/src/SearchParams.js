@@ -11,7 +11,7 @@ const SearchParams = () => {
   const breeds = [];
   return (
     <div className="search-params">
-      <form>
+      <form /* onSubmit={} */>
         <label htmlFor="location">
           Location
           <input
@@ -19,6 +19,9 @@ const SearchParams = () => {
             value={location}
             placeholder="Location"
             //e = event, e.target = target of the event
+            //notice here that every time SearchParams renders, it is creating a new function. Not ideal in terms of efficiency
+            //this is considered controlled input! 
+            //if you didn't need to monitor the user input here, you could remove the onChange and value properties and just use onSubmit with the form 
             onChange={(e) => updateLocation(e.target.value)}
           />
         </label>
