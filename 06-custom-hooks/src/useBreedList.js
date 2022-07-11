@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+//using a cache to save list of breeds for each animal
+//that way, will only make fetch request on animals that haven't been searched before
 const localCache = {};
 
 export default function useBreedList(animal) {
