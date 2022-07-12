@@ -11,6 +11,9 @@ class Carousel extends Component {
 
   handleIndexClick = (event) => {
     this.setState({
+      //in this case, event.target.dataset.index will be parsed as a string 
+      //the unary plus ('+') operator will convert it to a nunber
+      //need it to be a number since we are using active to serve as the index to find images that are passed in through props
       active: +event.target.dataset.index,
     });
   };
