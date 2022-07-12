@@ -1,4 +1,6 @@
 const Pet = (props) => {
+  //can destructure the props parameter directly instead of defining props within the ()
+  //would look like const Pet = ({name,animal,breed,images,locaiton,id}) => {}
   const { name, animal, breed, images, location, id } = props;
 
   let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
@@ -7,6 +9,7 @@ const Pet = (props) => {
   }
 
   return (
+    //the href in the a-tag is using react
     <a href={`/details/${id}`} className="pet">
       <div className="image-container">
         <img src={hero} alt={name} />
