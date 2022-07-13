@@ -29,6 +29,7 @@ class Details extends Component {
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} — ${breed} — ${city}, ${state}`}</h2>
+          {/*ThemeContext.Consumer will invoke this function so that the button will get returned with the theme  */}
           <ThemeContext.Consumer>
             {([theme]) => (
               <button style={{ backgroundColor: theme }}>Adopt {name}</button>
@@ -43,9 +44,12 @@ class Details extends Component {
 
 const WrappedDetails = () => {
   const params = useParams();
+  /*
+  const [theme] = useContext(ThemeContext);
+  */
   return (
     <ErrorBoundary>
-      <Details params={params} />
+      <Details params={params} /* theme={theme}*//>
     </ErrorBoundary>
   );
 };
